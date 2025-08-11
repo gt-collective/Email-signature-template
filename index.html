@@ -4,255 +4,75 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML Email Signature GT Collective</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-      
-      * {
-        box-sizing: border-box;
-      }
-      
-      .body {
-        padding: 0;
-        margin: 0;
-        font-family: "Roboto", sans-serif;
-      }
-      
-      /* Email Signature Container */
-      .signature-container {
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 20px;
-        background-color: #ffffff;
-      }
-      
-      /* Left Section - Logo (1/3 width) */
-      .signature-container > div:first-child {
-        flex: 0 0 33.333%;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        padding-top: 10px;
-      }
-      
-      .signature-container > div:first-child img {
-        max-width: 100%;
-        height: auto;
-        max-height: 150px;
-      }
-      
-      /* Right Section - Content (2/3 width) */
-      .right-section {
-        flex: 0 0 66.667%;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      /* Top Section - Name/Title and Contact Info side by side */
-      .top-section {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap: 20px;
-      }
-      
-      /* Name and Title Section */
-      .name-title {
-        flex: 0 0 auto;
-      }
-      
-      .name-title h1 {
-        margin: 0 0 5px 0;
-        font-size: 24px;
-        font-weight: 600;
-        color: #333333;
-        line-height: 1.2;
-      }
-      
-      .name-title p {
-        margin: 0;
-        font-size: 16px;
-        color: #666666;
-        font-weight: 400;
-      }
-      
-      /* Contact Info Section */
-      .contact-info {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        flex: 0 0 auto;
-        text-align: right;
-      }
-      
-      .contact-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 14px;
-        color: #333333;
-      }
-      
-      .contact-item img {
-        width: 16px;
-        height: 16px;
-        flex-shrink: 0;
-      }
-      
-      .contact-item span {
-        line-height: 1.4;
-      }
-      
-      /* Divider */
-      .divider {
-        height: 1px;
-        background-color: #e0e0e0;
-        margin: 15px 0;
-      }
-      
-      /* Address Section */
-      .address-section {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-      
-      /* Social Links */
-      .social-links {
-        display: flex;
-        gap: 15px;
-        margin-top: 10px;
-      }
-      
-      .social-icon {
-        display: inline-block;
-        transition: opacity 0.2s ease;
-      }
-      
-      .social-icon:hover {
-        opacity: 0.8;
-      }
-      
-      .social-icon img {
-        width: 20px;
-        height: 20px;
-      }
-
-      /* New styles for location-social-row */
-      .location-social-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px; /* Space between location and social links */
-      }
-      
-      /* Responsive Design */
-      @media (max-width: 480px) {
-        .signature-container {
-          flex-direction: column;
-          gap: 15px;
-          padding: 15px;
-        }
-        
-        .signature-container > div:first-child {
-          flex: none;
-          width: 100%;
-          justify-content: center;
-        }
-        
-        .right-section {
-          flex: none;
-          width: 100%;
-        }
-        
-        .top-section {
-          flex-direction: column;
-          align-items: center;
-          gap: 15px;
-        }
-        
-        .name-title h1 {
-          font-size: 20px;
-          text-align: center;
-        }
-        
-        .name-title p {
-          text-align: center;
-        }
-        
-        .contact-info {
-          text-align: center;
-        }
-        
-        .address-section {
-          align-items: center;
-        }
-        
-        .social-links {
-          justify-content: center;
-        }
-
-        .location-social-row {
-          flex-direction: column;
-          align-items: center;
-          gap: 10px;
-        }
-      }
-    </style>
+    <title>HTML Email Signature</title>
   </head>
-  <body>
-    <div class="signature-container">
-      <div>
-        <img src="assets/Logo.svg" alt="GT Collective Logo" />
-      </div>
-
-      <div class="right-section">
-        <div class="top-section">
-          <div class="name-title">
-            <h1>Jed Murphy</h1>
-            <p>Service Advisor</p>
-          </div>
-
-          <div class="contact-info">
-            <div class="contact-item">
-                <img src="assets/phone.png" alt="Phone" />
-                <span>0438 743 777</span>
-            </div>
-
-            <div class="contact-item">
-              <img src="assets/email.png" alt="Email" />
-                <span>jed@gtcollective.au</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <!-- Address -->
-        <div class="address-section">
-          <div class="location-social-row">
-            <div class="contact-item">
-              <img src="assets/location.png" alt="Location" />
-              <span>2 Production st, Noosaville, QLD 4566</span>
-            </div>
-
-            <div class="social-links">
-              <a href="#" class="social-icon">
-                <img src="assets/facebook.png" alt="Facebook" />
-              </a>
-              <a href="#" class="social-icon">
-                <img src="assets/instagram.png" alt="Instagram" />
-              </a>
-              <a href="#" class="social-icon">
-                <img src="assets/website.png" alt="Website" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <body style="padding: 0; margin: 0; font-family: Arial, sans-serif; background-color: #ffffff;">
+    <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width: 650px; margin: 0 0; background-color: #ffffff;">
+      <tr>
+        <!-- Left Column - Logo (1/3 width) -->
+        <td style="width: 150px; vertical-align: top; padding: 20px 20px 20px 20px;">
+          <img
+            src="https://gt-collective.github.io/Email-signature-template/assets/Logo.png"
+            alt="GT Collective Logo"
+            style="max-width: 160px; height: auto; max-height: 150px; display: block;"
+          />
+        </td>
+        
+        <!-- Right Column - Content (2/3 width) -->
+        <td style="width: 400px; vertical-align: top; padding: 20px 20px 20px 0;">
+          <!-- Top Section: Name/Title and Contact Info -->
+          <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+            <tr>
+              <!-- Name and Title -->
+              <td style="vertical-align: top; padding-right: 20px;">
+                <h1 style="margin: 0 0 5px 0; font-size: 24px; font-weight: 600; color: #333333; line-height: 1.2;">Jed Murphy</h1>
+                <p style="margin: 0; font-size: 16px; color: #666666; font-weight: 400;">Service Advisor</p>
+              </td>
+              
+              <!-- Contact Info -->
+              <td style="vertical-align: top; text-align: left;">
+                <div style="margin-bottom: 8px;">
+                  <img src="https://gt-collective.github.io/Email-signature-template/assets/phone.png" alt="Phone" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 8px;" />
+                  <span style="font-size: 14px; color: #333333; line-height: 1.4;">0438 743 777</span>
+                </div>
+                <div>
+                  <img src="https://gt-collective.github.io/Email-signature-template/assets/email.png" alt="Email" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 8px;" />
+                  <span style="font-size: 14px; color: #333333; line-height: 1.4;">jed@gtcollective.au</span>
+                </div>
+              </td>
+            </tr>
+          </table>
+          
+          <!-- Divider -->
+          <div style="height: 1px; background-color: #e0e0e0; margin: 15px 0;"></div>
+          
+          <!-- Bottom Section: Location and Social Links -->
+          <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+            <tr>
+              <!-- Location -->
+              <td style="vertical-align: top; padding-right: 20px;">
+                <div style="display: inline-block;">
+                  <img src="https://gt-collective.github.io/Email-signature-template/assets/location.png" alt="Location" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 8px;" />
+                  <span style="font-size: 14px; color: #333333; line-height: 1.4;">2 Production st, Noosaville, QLD 4566</span>
+                </div>
+              </td>
+              
+              <!-- Social Links -->
+              <td style="vertical-align: top; text-align: left;">
+                <a href="#" style="display: inline-block; margin-left: 15px;">
+                  <img src="https://gt-collective.github.io/Email-signature-template/assets/facebook.png" alt="Facebook" style="width: 20px; height: 20px;" />
+                </a>
+                <a href="#" style="display: inline-block; margin-left: 15px;">
+                  <img src="https://gt-collective.github.io/Email-signature-template/assets/instagram.png" alt="Instagram" style="width: 20px; height: 20px;" />
+                </a>
+                <a href="#" style="display: inline-block; margin-left: 15px;">
+                  <img src="https://gt-collective.github.io/Email-signature-template/assets/website.png" alt="Website" style="width: 20px; height: 20px;" />
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
